@@ -1,15 +1,24 @@
 package ch.finecloud.demo.json;
 
 public class Greeting {
-    private final String message;
+    private String message;
+
+    public Greeting() {
+    }
 
     public Greeting(String message) {
+        this.message = message;
+    }
+
+    public void setMessage(String message) {
         this.message = message;
     }
 
     public String getMessage() {
         return message;
     }
+
+
 
     @Override
     public String toString() {
