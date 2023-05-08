@@ -17,8 +17,8 @@ class AstroServiceImplTest {
     private AstroService astroService;
 
     @Test
-    void getAstronauts() {
-        AstroResult astroResult = astroService.getAstronauts();
+    void getAstronautsRT() {
+        AstroResult astroResult = astroService.getAstronautsRT();
         int number = astroResult.number();
         System.out.println("There are " + number + " astronauts in space right now.");
         List<Assignment> people = astroResult.people();
@@ -27,6 +27,18 @@ class AstroServiceImplTest {
                 () -> assertTrue(number >= 0),
                 () -> assertEquals(number, people.size())
         );
+    }
 
+    @Test
+    void getAstronautsWC() {
+        AstroResult astroResult = astroService.getAstronautsWC();
+        int number = astroResult.number();
+        System.out.println("There are " + number + " astronauts in space right now.");
+        List<Assignment> people = astroResult.people();
+        people.forEach(System.out::println);
+        assertAll(
+                () -> assertTrue(number >= 0),
+                () -> assertEquals(number, people.size())
+        );
     }
 }

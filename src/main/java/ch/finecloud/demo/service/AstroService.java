@@ -6,5 +6,6 @@ import ch.finecloud.demo.json.AstroResult;
 
 public interface AstroService {
 
-    AstroResult getAstronauts();
+    AstroResult getAstronautsRT();
+    AstroResult getAstronautsWC();
 }
