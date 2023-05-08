@@ -36,8 +36,8 @@ class DemoApplicationTests {
 
     @Test
     void getBeanTwice() {
-        Greeting greeting1 = applicationContext.getBean(Greeting.class);
-        Greeting greeting2 = applicationContext.getBean(Greeting.class);
+        Greeting greeting1 = applicationContext.getBean("defaultGreeting", Greeting.class);
+        Greeting greeting2 = applicationContext.getBean("defaultGreeting", Greeting.class);
         assertSame(greeting1, greeting2);
     }
 }

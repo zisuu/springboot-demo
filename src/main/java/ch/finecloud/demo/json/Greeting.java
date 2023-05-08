@@ -2,7 +2,6 @@ package ch.finecloud.demo.json;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class Greeting {
     private String message;
 
