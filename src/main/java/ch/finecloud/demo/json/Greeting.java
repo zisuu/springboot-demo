@@ -1,5 +1,8 @@
 package ch.finecloud.demo.json;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Greeting {
     private String message;
 
@@ -18,12 +21,12 @@ public class Greeting {
         return message;
     }
 
-
-
     @Override
     public String toString() {
         return "Greeting{" +
                 "message='" + message + '\'' +
                 '}';
     }
+
+
 }
