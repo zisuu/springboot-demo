@@ -11,7 +11,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class GeocoderServiceImplTest {
-    private final Logger logger = LoggerFactory.getLogger(GeocoderServiceImplTest.class);
 
     @Autowired
     private GeocoderService geocoderService;
